@@ -5,6 +5,8 @@
 
 */
 
+@use "sass:map";
+
 $colors-table: (
   "light-silver": #aaa,
   "moon-gray": #ccc,
@@ -21,26 +23,26 @@ $colors-table: (
 	}
 
 	.striped--light-silver:nth-child(odd) {
-	background-color: map-get($colors-table, "light-silver");
+	background-color: map.get($colors-table, "light-silver");
 	}
 
 	.striped--moon-gray:nth-child(odd) {
-	background-color: map-get($colors-table, "moon-gray");
+	background-color: map.get($colors-table, "moon-gray");
 	}
 
 	.striped--light-gray:nth-child(odd) {
-	background-color: map-get($colors-table, "light-gray");
+	background-color: map.get($colors-table, "light-gray");
 	}
 
 	.striped--near-white:nth-child(odd) {
-	background-color: map-get($colors-table, "near-white");
+	background-color: map.get($colors-table, "near-white");
 	}
 
 	.stripe-light:nth-child(odd) {
-	background-color: map-get($colors-table, "white-10");
+	background-color: map.get($colors-table, "white-10");
 	}
 
 	.stripe-dark:nth-child(odd) {
-	background-color: map-get($colors-table, "black-10");
+	background-color: map.get($colors-table, "black-10");
 	}
 }

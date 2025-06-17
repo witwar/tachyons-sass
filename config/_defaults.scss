@@ -2,6 +2,8 @@
 
 /*  Breakpoints
 --------------------------------------------------------------------------------------- */
+@use "sass:map";
+
 $breakpoints: (
   "ns": "screen and (min-width: 30em)",
   "m": "screen and (min-width: 30em) and (max-width: 60em)",
@@ -259,7 +261,7 @@ $colors: (
   "washed-red": #ffdfdf
 ) !default;
 
-$grey: map-get($colors, "gray") !default; // because we are stupid
+$grey: map.get($colors, "gray") !default; // because we are stupid
 
 $colors-border: $colors !default;
 $colors-skins-pseudo: $colors !default;
