@@ -17,32 +17,14 @@ $colors-table: (
 ) !default;
 
 @mixin tables {
-	.collapse {
-	border-collapse: collapse;
-	border-spacing: 0;
-	}
+  .collapse {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
 
-	.striped--light-silver:nth-child(odd) {
-	background-color: map.get($colors-table, "light-silver");
-	}
-
-	.striped--moon-gray:nth-child(odd) {
-	background-color: map.get($colors-table, "moon-gray");
-	}
-
-	.striped--light-gray:nth-child(odd) {
-	background-color: map.get($colors-table, "light-gray");
-	}
-
-	.striped--near-white:nth-child(odd) {
-	background-color: map.get($colors-table, "near-white");
-	}
-
-	.stripe-light:nth-child(odd) {
-	background-color: map.get($colors-table, "white-10");
-	}
-
-	.stripe-dark:nth-child(odd) {
-	background-color: map.get($colors-table, "black-10");
-	}
+  @each $name, $color in $colors-table {
+    .striped--#{$name}:nth-child(odd) {
+      background-color: $color;
+    }
+  }
 }
